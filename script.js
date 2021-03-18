@@ -9,7 +9,7 @@ function onsignin(googleUser)
 function signout()
 {
   var auth2 = gapi.auth2.getAuthInstance();
-  auth2.signout().then(function(){
+  auth2.signout().then(function(e){
     alert("You have been Signed out");
   
     $(".g-signin2").css("display","block");  //display sign in button
