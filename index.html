@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google SignIn to webPage</title>
+
+    <!--bootstrap CDN (https://www.w3schools.com/bootstrap/bootstrap_get_started.asp) -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+
+    <!--code for addng google sign in button with oAuth id    (https://developers.google.com/identity/sign-in/web/sign-in)-->
+    <meta
+      name="google-signin-client_id"
+      content="616757758915-077ff35rr6jk9epnvgd3endsdrrm7kof.apps.googleusercontent.com"
+    />
+
+    <!--google platform library  (https://developers.google.com/identity/sign-in/web/sign-in)-->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <style>
+      .g-signin2 {
+        margin-left: 500px;
+        margin-top: 200px;
+      }
+      .data {
+        margin-left: 500px;
+        margin-top: 200px;
+      }
+      .headline {
+        
+        font-size: 35px;
+        color: green;
+      }
+      .mailid {
+        font-size: 20px;
+      }
+      .alert {
+        width: 500px;
+      }
+    </style>
+
+    <!--jquery CDN   (https://www.w3schools.com/jquery/jquery_get_started.asp)-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="script.js"></script>
+
+    
+  </head>
+
+  <body>
+    <div class="g-signin2" data-onsuccess="onsignin"></div>
+
+    <div class="data">
+      <p class="headline">Profile Details</p>
+      <p class="mailid">Email Address</p>
+      <p id="email" class="alert alert-danger"></p>
+      <button onclick="signout" class="btn btn-danger">Sign Out</button>
+    </div>
+
+  </body>
+</html>
